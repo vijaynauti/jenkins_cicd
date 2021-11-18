@@ -3,10 +3,10 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:484010831236:task-definition/eternals:1"
+        TaskDefinition: "arn:aws:ecs:us-east-1:484010831236:task-definition/eternals:3"
         LoadBalancerInfo:
           ContainerName: "eternals"
           ContainerPort: 80
 Hooks:
-  - BeforeInstall: "test_before/test.sh"
-  - AfterInstall: "after/start.sh"
+  - BeforeInstall: BeforeInstall.sh
+  - AfterInstall: AfterInstall.sh
