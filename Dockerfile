@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM 484010831236.dkr.ecr.us-east-1.amazonaws.com/nodebase:latest
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
